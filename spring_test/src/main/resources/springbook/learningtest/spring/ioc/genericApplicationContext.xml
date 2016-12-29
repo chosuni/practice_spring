@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">			
+
+<beans>
+	<bean id="hello" class="springbook.learningtest.spring.ioc.bean.Hello">
+		<property name="name" value="Spring"></property>
+		<property name="printer" ref="printer"></property>
+	</bean>
+	
+	<bean id="printer" class="springbook.learningtest.spring.ioc.bean.StringPrinter"></bean>
+	
+</beans>

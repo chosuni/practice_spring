@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" "http://castor.org/mapping.dtd">
+
+<mapping>
+		<!-- springbook.user.sqlservice.jaxb -->
+	<class name="springbook.user.sqlservice.jaxb.Sqlmap">
+		<map-to xml="sqlmap" ></map-to>
+		<field name="sql" type="springbook.user.sqlservice.jaxb.SqlType" required="true" collection="arraylist">
+			<bind-xml name="sql" node="element"></bind-xml>
+		</field>
+	</class>
+	
+	<class name="springbook.user.sqlservice.jaxb.SqlType">
+		<map-to xml="sql"></map-to>
+		<field name="key" type="string" required="true">
+			<bind-xml name="key" node="attribute"></bind-xml>
+		</field>
+		<field name="value" type="string" required="true">
+			<bind-xml node="text"></bind-xml>
+		</field>		
+	</class>
+</mapping>

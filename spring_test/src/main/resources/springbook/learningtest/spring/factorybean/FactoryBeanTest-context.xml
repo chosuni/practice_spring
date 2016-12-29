@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			"http://www.springframework.org/dtd/spring-beans-2.0.dtd">			
+
+<!-- 
+- 기본적으로 bean 태그에 들어가는 class는 기본 생성자로 객체를 생성할 수 있어야 된다. Class.forName("").newInstance() 메소드를 사용하여 빈을 생성한다.
+- 팩토리 빈 클래스로 정의하면 가능. FactoryBean<T> 인터페이스의 getObject() 메소드를 호출하여 빈을 생성함. 
+
+ -->	
+ <beans>		
+	<bean id="message" class="springbook.learningtest.spring.factorybean.MessageFactoryBean">
+		<property name="text" value="Factory Bean"></property>
+	</bean>	
+</beans>
